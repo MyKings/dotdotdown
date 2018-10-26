@@ -168,7 +168,7 @@ class DownLoader(object):
                             save_local_path=output_dir
                         ))
                         if not os.path.isfile(output_dir):
-                            download = self.connect(query_url)
+                            download = self.connect(sub_url)
                             with open(output_dir, "wb") as fp:
                                 fp.write(download.content)
                             logger.info('[+] Save "{0}" file successfully'.format(output_dir))
